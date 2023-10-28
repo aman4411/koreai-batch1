@@ -1,0 +1,11 @@
+/* Single Line Comment  */
+
+/* Multiline
+Comment 
+In 
+CSS */
+
+/* Applies red color on all h1 tags */
+h1{
+    color: red;
+}
