@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descendant Selector</title>
+    <!-- Adjacent Sibling selector is denoted by +  -->
+    <style>
+        div + p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- These 2 paragraphs are children of div tag  -->
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, laborum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, iste.</p>
+        <span>
+            <!-- Not a children but descendant  -->
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, architecto?</p>
+        </span>
+    </div>
+    <!-- These are siblings  -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quia?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, placeat.</p>
+</body>
+</html>
