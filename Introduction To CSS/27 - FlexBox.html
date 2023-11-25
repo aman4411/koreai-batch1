@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+
+    <style>
+        #parentDiv {
+            border: 1px solid black;
+            display: flex;
+            height: 400px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #div1 {
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            margin: 10px;
+            order: 2;
+        }
+
+        #div2 {
+            height: 150px;
+            width: 150px;
+            background-color: blue;
+            margin: 10px;
+            order: 1;
+        }
+
+        #div3 {
+            height: 150px;
+            width: 150px;
+            background-color: green;
+            margin: 10px;
+            order: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parentDiv">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+    </div>
+</body>
+
+</html>
