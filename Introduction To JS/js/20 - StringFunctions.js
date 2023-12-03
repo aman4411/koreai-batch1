@@ -48,6 +48,23 @@ console.log(trimmedString);
 
 //padding
 let rollNumber = '253';
-let paddedRollNumber = rollNumber.padStart(6,'*');
+let paddedRollNumber = rollNumber.padStart(6,'0');
 console.log(paddedRollNumber);
 
+let anotherRollNumber = '2654342';
+let paddedRollNumber1 = anotherRollNumber.padStart(6,'0');
+console.log(paddedRollNumber1);
+
+// extract character at specific index
+let company = 'Perfect Elearning';
+console.log(company.charAt(3));
+
+//splitting a string into array
+let names = "Aman,Saloni,Pooja,Rahul,Rajat";
+console.log(names + ' ' + typeof(names));
+let nameArray = names.split(',');
+console.log(nameArray);
+
+let numbersString = "10.23.23.12.54.23";
+let numberArray = numbersString.split(".");
+console.log(numberArray);

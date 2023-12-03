@@ -1,8 +1,7 @@
 let date = new Date();
 console.log(date.getDay());
 
-debugger;
-switch (0){
+switch (date.getDay()){
     case 0:
         console.log('Sunday');
         break;
