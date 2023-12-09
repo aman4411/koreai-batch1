@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validations Using Js</title>
+    <style>
+        .error{
+            color: red;
+            display: none;   
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Form</h1>
+    <form action="">
+        <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text">
+        </div>
+        <br>
+        <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email">
+        </div>
+        <br>
+        <div>
+            <label for="phone">Phone</label>
+            <input id="phone" type="text" name="phone">
+        </div>
+        <br>
+        <div>
+            <label for="male">Male</label>
+            <input id="male" name="gender" type="radio">
+            <label for="female">Female</label>
+            <input id="female" name="gender" type="radio">
+        </div>
+        <br>
+        <p id="error"></p>
+        <button onclick="validateForm(event)">Contact Us</button>
+    </form>
+    <script src="/Introduction To JS/js/30 - FormValidations.js"></script>
+</body>
+</html>
