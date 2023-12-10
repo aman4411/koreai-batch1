@@ -15,8 +15,23 @@ let validateForm = (event) => {
         return;
     }
 
+    if(name.value.length < 3 || name.value.length > 20){
+        error.innerHTML = 'Name can be of 3-20 characters*';
+        error.style.display = 'block';
+        error.style.color = 'red';
+        return;
+    }
+
     if (email == undefined || email.value.length == 0){
         error.innerHTML = 'Please enter your email*';
+        error.style.display = 'block';
+        error.style.color = 'red';
+        return;
+    }
+
+    let emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    if(!emailRegex.test(email.value)){
+        error.innerHTML = 'Please enter a valid email*';
         error.style.display = 'block';
         error.style.color = 'red';
         return;
@@ -29,11 +44,14 @@ let validateForm = (event) => {
         return;
     }
 
-    let phoneNumber = Number.parseInt(phone.value);
-    if(!Number.isInteger(phoneNumber)){
-        error.innerHTML = 'Please enter a valid phone*';
+    let phoneNumberRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
+    if(!phoneNumberRegex.test(phone.value)){
+        error.innerHTML = 'Please enter a valid phone number*';
         error.style.display = 'block';
         error.style.color = 'red';
         return;
     }
+
+    error.style.display = 'none';
+    alert('Your form has been submitted')
 }

@@ -17,3 +17,7 @@ console.log(paraClassElements);
 for(paragraph of paraClassElements){
     console.log(paragraph.innerHTML)
 }
+
+//4. querySelector()
+let allParaClassElements = document.querySelector('.para');
+console.log(allParaClassElements);
