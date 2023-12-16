@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        #outerDiv{
+            display: flex;
+            flex-direction: column;
+            height: 60vh;
+            width: 20vw;
+            background-color: #dedede;
+            box-shadow: 2px 2px 2px black;
+        }
+        #screen{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20%;
+            width: 100%;
+        }
+        #inputScreen{
+            width: 90%;
+            height: 50%;
+            text-align: right;
+            font-size: 30px;
+        }
+        #keys{
+            height: 80%;
+            display: flex;
+            flex-direction: row;    
+        }
+        #numericKeys{
+            width: 60%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: space-around;
+        }
+        #operationKeys{
+            width: 40%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: space-around;
+            justify-content: space-around;
+        }
+        .key{
+            height: 40px;
+            width: 30%;
+            margin: 2px;
+            border-radius: 10%;
+            box-shadow: 1px 1px 1px black;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+
+    <div id="outerDiv">
+        <div id="screen">
+            <input id="inputScreen" type="text" value="0" readonly>
+        </div>
+        <div id="keys">
+            <div id="numericKeys">
+                <button class="key" onclick="appendValue('1')">1</button>
+                <button class="key" onclick="appendValue('2')">2</button>
+                <button class="key" onclick="appendValue('3')">3</button>
+                <button class="key" onclick="appendValue('4')">4</button>
+                <button class="key" onclick="appendValue('5')">5</button>
+                <button class="key" onclick="appendValue('6')">6</button>
+                <button class="key" onclick="appendValue('7')">7</button>
+                <button class="key" onclick="appendValue('8')">8</button>
+                <button class="key" onclick="appendValue('9')">9</button>
+            </div>
+            <div id="operationKeys">
+                <button class="key" onclick="appendValue('/')">/</button>
+                <button class="key" onclick="appendValue('*')">X</button>
+                <button class="key" onclick="appendValue('+')">+</button>
+                <button class="key" onclick="appendValue('-')">-</button>
+                <button class="key" onclick="appendValue('0')">0</button>
+                <button class="key" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="/Introduction To JS/js/36 - Calculator.js"></script>
+</body>
+</html>

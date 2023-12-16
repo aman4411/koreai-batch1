@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <style>
+        ul{
+            list-style-type: none;
+        }
+        ul li{
+            background-color: paleturquoise;
+            width: 40vw;
+            margin: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        span{
+            color: red;
+            font-weight: 800;
+            font-size: large;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>To Do List</h1>
+
+    <input type="text" id="task">
+    <button id="addBtn" onclick="addTask()">Add Task</button>
+
+    <ul id="to-do-list" onclick="handleItem(event)">
+        <li>
+            Study Js <span>X</span>
+        </li>
+        <li>
+            Study CSS <span>X</span>
+        </li>
+        <li>
+            Play Counterstrike <span>X</span>
+        </li>
+    </ul>
+    <script src="/Introduction To JS/js/ToDoList.js"></script>
+</body>
+</html>
